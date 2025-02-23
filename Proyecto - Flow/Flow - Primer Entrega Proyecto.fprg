@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Flow - Primer Entrega Proyecto"/>
+        <attribute name="authors" value="spino"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-23 04:38:50 PM"/>
+        <attribute name="created" value="c3Bpbm87QUxFWF9MQVBUT1A7MjAyNS0wMi0yMzswMzoyOTozOCBQTTsyNjk1"/>
+        <attribute name="edited" value="c3Bpbm87QUxFWF9MQVBUT1A7MjAyNS0wMi0yMzswNDozODo1MCBQTTsxOzI3OTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="direction" type="String" array="False" size=""/>
+            <declare name="userAnswer" type="String" array="False" size=""/>
+            <output expression="&quot;Has encontrado la localizaci&#243;n del famoso tesoro del pirata Bytero, tu &#250;nico problema es que tu avi&#243;n perdi&#243; su motor y tuviste que saltar usando tu paraca&#237;das, tuviste suerte y ca&#237;ste en el templo principal pero necesitaras usar tu ingenio para acceder al tesoro&quot;" newline="True"/>
+            <output expression="&quot;Te encuentras en un lugar extremadamente antiguo, estas rodeado de ruinas cubiertas de musgo, completamente colapsadas, notas que en el piso se muestra un aparato incrustado en la piedra que asemeja una br&#250;jula, cada v&#233;rtice tiene una indentaci&#243;n, como si pudieras incrustar alg&#250;n objeto, as&#237; como 4 letras, N, S, E, O, alrededor tuyo descubres que existen 4 arcos de piedra, en la direcci&#243;n de cada v&#233;rtice, los arcos emiten un ruido casi imperceptible, como si estuvieran a punto de activarse en cualquier momento, pero tu ya sabes como activarlo el aparato es similar al que aparece en el mapa que dej&#243; Bytero, te acercas y presionas la gema roja en el centro y los arcos explotan en color y se activan, mostrando diferentes lugares, seg&#250;n el mapa necesitas 4 llaves para acceder al tesoro. &#191;qu&#233; deseas hacer?&quot;" newline="True"/>
+            <input variable="direction"/>
+            <if expression="direction == &quot;n&quot; || direction == &quot;N&quot;">
+                <then>
+                    <output expression="&quot;Has accesado el portal del norte el cual te lleva a la dorada playa Oro AU, lo &#250;nico que ves es arena y peque&#241;os destellos de pertenencias olvidadas entre esas pertenencias encuentras un contenedor con botellas de alg&#250;n tipo de licor muchas de ellas est&#225;n rotas pero logras rescatar 2, as&#237; como un poco de tela y algunas estacas con las que podr&#237;as hacer una antorcha, mientras exploras tambi&#233;n notas un peque&#241;o parche con algunas palmeras y tierra un poco m&#225;s dura y una equis hecha con un par de piezas de madera, es este el tesoro de bytero? el problema es que la tierra es muy dura para usar tus manos &#191;tienes una pala?&quot;" newline="True"/>
+                    <input variable="userAnswer"/>
+                    <if expression="userAnswer == &quot;si&quot; || userAnswer == &quot;Si&quot;">
+                        <then>
+                            <output expression="&quot;Usas la pala para cavar con toda tu fuerza pero lo que encuentras es solo una vieja llave, tal vez puedas usarla en las ruinas?&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Deber&#237;as explorar un poco m&#225;s.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="direction == &quot;s&quot; || direction == &quot;S&quot;">
+                        <then>
+                            <output expression="&quot;Has accesado el portal del sur, te encuentras en una cueva en la que apenas puedes ver, &#191;tienes una antorcha?&quot;" newline="True"/>
+                            <input variable="userAnswer"/>
+                            <if expression="userAnswer == &quot;si&quot; || userAnswer == &quot;Si&quot;">
+                                <then>
+                                    <output expression="&quot;Te encuentras en una cueva h&#250;meda y fr&#237;a, las paredes est&#225;n cubiertas de piedras filosas y peque&#241;os minerales que reaccionan a la luz, creando peque&#241;os destellos, en el centro de la cueva se encuentra un peque&#241;o lago un poco  profundo, en el centro del lago y en el fondo ves un destellos, parece un objeto que fue hecho a partir del mismo mineral de las paredes que reacciona con la luz. &#191;que deseas hacer?&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Debes conseguir algo para iluminar tu camino y volver luego.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="direction == &quot;e&quot; || direction == &quot;E&quot;">
+                                <then>
+                                    <output expression="&quot;Has accesado el portal del este, te encuentras en una jungla impregnable, tan llena de enredaderas y helechos que casi no te puedes mover, si tuvieras un machete podr&#237;as abrirte paso y hasta cortar algo de enredadera que te podria ser util luego. &#191;tienes un machete?&quot;" newline="True"/>
+                                    <input variable="userAnswer"/>
+                                    <if expression="userAnswer == &quot;si&quot; || userAnswer == &quot;Si&quot;">
+                                        <then>
+                                            <output expression="&quot;Usando tu machete logras abrir un camino entre la vegetaci&#243;n, hasta llegar a lo que parece un claro, en el claro ves una masa de plantas espinosas completamente densa, notas que aunque hay muchas, est&#225;n secas, vez algo en el centro de la masa de espinas, algo que parece otra llave, si tuvieras una antorcha podrias quemar la enredadera espinosa seca y conseguir la llave, &#191;tienes una antorcha?&quot;" newline="True"/>
+                                            <input variable="userAnswer"/>
+                                            <if expression="userAnswer == &quot;si&quot; || userAnswer == &quot;Si&quot;">
+                                                <then>
+                                                    <output expression="&quot;Usas la antorcha para quemar la enredadera espinosa, luego de varios minutos puedes acceder a la llave del Este.&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Deber&#237;as explorar m&#225;s las ruinas o los otros portales&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Deber&#237;as explorar otras zonas y tratar de encontrar uno.&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="direction == &quot;o&quot; || direction == &quot;O&quot;">
+                                        <then>
+                                            <output expression="&quot;Has accesado el portal del oeste, te encuentras en una zona monta&#241;osa, est&#225;s rodeado de picos monumentalmente tan grandes que tocan el cielo, pero notas que frente a ti hay como un tipo de pilote de madera, asomas tu cabeza en el borde y ves que algunos metros m&#225;s abajo hay un tipo de plataforma, en la plataforma notas un esqueleto con lo que parece una llave en su mano y cerca de el vez una pala antigua, podr&#237;as bajar si amarraras alg&#250;n tipo de cuerda al pilote, &#191;Tienes alg&#250;n tipo de cuerda?&quot;" newline="True"/>
+                                            <input variable="userAnswer"/>
+                                            <if expression="userAnswer == &quot;si&quot; || userAnswer == &quot;Si&quot;">
+                                                <then>
+                                                    <output expression="&quot;usando las enredaderas que conseguiste en la jungla las amarras al pilote y logra descender a la plataforma y logras adquirir la llave del oeste, la pala que viste esta en muy buen estado y podr&#237;as usarla luego.&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Deber&#237;as buscar en otras zonas, tal vez en la jungla?&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
