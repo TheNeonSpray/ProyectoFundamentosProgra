@@ -8,6 +8,16 @@ public class LostTreasure {
 
         System.out.println(
                 "Has encontrado la localización del famoso tesoro del pirata Bytero, tu único problema es que tu avión perdió su motor y tuviste que saltar usando tu paracaídas, tuviste suerte y caíste en el templo principal pero necesitaras usar tu ingenio para acceder al tesoro\n");
+                     //Mapa agregado, Esteban
+                     System.out.println(" ____________________");
+                     System.out.println("|          ^          |");
+                     System.out.println("|                     |");
+                     System.out.println("|          N          |");
+                     System.out.println("|^       W + E       ^|");
+                     System.out.println("|          S          |");
+                     System.out.println("|                     |");
+                     System.out.println("|__________^__________|\n");
+        
         direction = Utils.leerString(
                 "Te encuentras en un lugar extremadamente antiguo, estas rodeado de ruinas cubiertas de musgo, completamente colapsadas, notas que en el piso se muestra un aparato incrustado en la piedra que asemeja una brújula, cada vértice tiene una indentación, como si pudieras incrustar algún objeto, así como 4 letras, N, S, E, O, alrededor tuyo descubres que existen 4 arcos de piedra, en la dirección de cada vértice, los arcos emiten un ruido casi imperceptible, como si estuvieran a punto de activarse en cualquier momento, pero tu ya sabes como activarlo el aparato es similar al que aparece en el mapa que dejó Bytero, te acercas y presionas la gema roja en el centro y los arcos explotan en color y se activan, mostrando diferentes lugares, según el mapa necesitas 4 llaves para acceder al tesoro. \n¿Hacia donde te quieres dirigir?\n");
         direction = direction.toLowerCase();
