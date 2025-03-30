@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Flow - Primer Entrega Proyecto"/>
+        <attribute name="authors" value="spino"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-30 12:27:05 PM"/>
+        <attribute name="created" value="c3Bpbm87QUxFWF9MQVBUT1A7MjAyNS0wMi0yMzswMzoyOTozOCBQTTsyNjk1"/>
+        <attribute name="edited" value="cXVlc2E7REVTS1RPUC1RTE1BQUFUOzIwMjUtMDMtMjY7MDg6MzQ6MTQgcC7CoG0uOzU7cXVlc2E7REVTS1RPUC1RTE1BQUFUOzIwMjUtMDMtMjU7MDU6MjQ6MzkgcC7CoG0uO2FjZXJ0aWpvIHB1ZXJ0YSBkZWwgY2VudHJvIHJ1dGluYS5mcHJnOzEwNDQw"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLTYzVE5FSEI7MjAyNS0wMy0yODswMTowNjoxMyBhLsKgbS47MzszNDg5"/>
+        <attribute name="edited" value="cXVlc2E7REVTS1RPUC1RTE1BQUFUOzIwMjUtMDMtMzA7MTE6MTI6MzQgYS7CoG0uOzY7MzMyNA=="/>
+        <attribute name="edited" value="c3Bpbm87QUxFWF9MQVBUT1A7MjAyNS0wMy0zMDsxMjoyNzowNSBQTTsyOzI3OTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="direction, userAnswer, currentLocation, userAction" type="String" array="False" size=""/>
+            <output expression="&quot;Has encontrado la localizaci&#243;n del famoso tesoro del pirata Bytero, tu &#250;nico problema es que tu avi&#243;n perdi&#243; su motor y tuviste que saltar usando tu paraca&#237;das, tuviste suerte y ca&#237;ste en el templo principal, pero necesitar&#225;s usar tu ingenio para acceder al tesoro&quot;" newline="True"/>
+            <output expression="&quot;Te encuentras en un lugar extremadamente antiguo, est&#225;s rodeado de ruinas cubiertas de musgo, completamente colapsadas, notas que en el piso se muestra un aparato incrustado en la piedra que asemeja una br&#250;jula, cada v&#233;rtice tiene una indentaci&#243;n, como si pudieras incrustar alg&#250;n objeto, as&#237; como 4 letras; N, S, E, O, alrededor tuyo descubres que existen 4 arcos de piedra, en la direcci&#243;n de cada v&#233;rtice, los arcos emiten un ruido casi imperceptible, como si estuvieran a punto de activarse en cualquier momento, pero tu ya sabes como activarlo, el aparato es similar al que aparece en el mapa que dej&#243; Bytero, te acercas y presionas la gema roja en el centro y los arcos explotan en color y se activan, mostrando diferentes lugares, seg&#250;n el mapa necesitas 4 llaves para acceder al tesoro. &#191;Hacia qu&#233; direcci&#243;n deseas dirigirte? N, S, E, O&quot;" newline="True"/>
+            <do expression="">
+                <assign variable="currentLocation" expression="&quot;Templo&quot;"/>
+                <output expression="&quot;Ubicaci&#243;n Actual: &quot; &amp; currentLocation" newline="True"/>
+                <input variable="direction"/>
+                <if expression="direction == &quot;n&quot; || direction == &quot;N&quot;">
+                    <then>
+                        <output expression="&quot;Has accesado el portal del norte el cual te lleva a la dorada playa Oro AU, lo &#250;nico que ves es arena y peque&#241;os destellos de pertenencias olvidadas, entre esas pertenencias encuentras un contenedor con botellas de alg&#250;n tipo de licor, muchas de ellas est&#225;n rotas pero logras rescatar 2, tambi&#233;n un poco de tela y algunas estacas con las que podr&#237;as hacer una antorcha, mientras exploras tambi&#233;n notas un peque&#241;o parche con algunas palmeras y tierra un poco m&#225;s dura y una equis hecha con un par de piezas de madera, es este el tesoro de Bytero? el problema es que la tierra es muy dura para usar tus manos. &#191;Tienes una pala?&quot;" newline="True"/>
+                        <input variable="userAnswer"/>
+                        <if expression="userAnswer == &quot;si&quot; || userAnswer == &quot;Si&quot;">
+                            <then>
+                                <output expression="&quot;Usas la pala para cavar con toda tu fuerza, pero lo que encuentras es solo una vieja llave, tal vez puedas usarla en las ruinas&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Deber&#237;as explorar un poco m&#225;s.&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="direction == &quot;s&quot; || direction == &quot;S&quot;">
+                            <then>
+                                <output expression="&quot;Has accesado el portal del sur, te encuentras en una cueva en la que apenas puedes ver. &#191;Tienes una antorcha?&quot;" newline="True"/>
+                                <input variable="userAnswer"/>
+                                <if expression="userAnswer == &quot;si&quot; || userAnswer == &quot;Si&quot;">
+                                    <then>
+                                        <call expression="acertijoCueva"/>
+                                        <output expression="&quot;Te encuentras en una cueva h&#250;meda y fr&#237;a, las paredes est&#225;n cubiertas de piedras filosas y peque&#241;os minerales que reaccionan a la luz creando peque&#241;os destellos, en el centro de la cueva se encuentra un peque&#241;o lago un poco profundo, en el centro del lago y en el fondo, ves un destello, parece un objeto que fue hecho a partir del mismo mineral de las paredes que reacciona con la luz, puedes sumergirte e ir por el objeto o continuar tu camino. &#191;Deseas ir por el objeto?&quot;" newline="True"/>
+                                        <input variable="userAnswer"/>
+                                        <if expression="userAnswer == &quot;si&quot; || userAnswer == &quot;Si&quot;">
+                                            <then>
+                                                <output expression="&quot;Te lanzas al agua y nadas con mucha fuerza hacia el objeto brilloso, te cuesta aguantar la respiraci&#243;n y empiezas a perder el aire, pero contin&#250;as con todas tus fuerzas, logras tomar el objeto, al llegar a la superficie inspeccionas el objeto y ves que es la llave del sur&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Exploras un poco la cueva y te encuentras un machete un poco oxidado, lo guardas porque podr&#237;a servite de algo m&#225;s adelante&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Debes conseguir algo para iluminar tu camino, vuelve con una antorcha.&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="direction == &quot;e&quot; || direction == &quot;E&quot;">
+                                    <then>
+                                        <output expression="&quot;Has accesado el portal del este, te encuentras en una jungla tan llena de enredaderas y helechos que casi no te puedes mover, si tuvieras un machete, podr&#237;as abrirte paso y hasta cortar algo de enredadera que te podria ser &#250;til despu&#233;s. &#191;Tienes un machete?&quot;" newline="True"/>
+                                        <input variable="userAnswer"/>
+                                        <if expression="userAnswer == &quot;si&quot; || userAnswer == &quot;Si&quot;">
+                                            <then>
+                                                <output expression="&quot;Usando tu machete, logras abrir un camino entre la vegetaci&#243;n hasta llegar a lo que parece un claro, en el claro ves una masa de plantas espinosas completamente densa, notas que aunque hay muchas, est&#225;n secas, ves algo en el centro de la masa de espinas, algo que parece otra llave, si tuvieras una antorcha podr&#237;as quemar la enredadera espinosa y seca para conseguir la llave. &#191;Tienes una antorcha?&quot;" newline="True"/>
+                                                <input variable="userAnswer"/>
+                                                <if expression="userAnswer == &quot;si&quot; || userAnswer == &quot;Si&quot;">
+                                                    <then>
+                                                        <output expression="&quot;Usas la antorcha para quemar la enredadera espinosa, luego de varios minutos puedes acceder a la llave del este.&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;Deber&#237;as explorar m&#225;s las ruinas o los otros portales&quot; &amp; &quot;En el camino encuentras una cuerda, la guardas porque podr&#237;a serte &#250;til&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Deber&#237;as explorar otras zonas y tratar de encontrar uno.&quot; &amp; &quot;PISTA: busca en las cuevas&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="direction == &quot;o&quot; || direction == &quot;O&quot;">
+                                            <then>
+                                                <output expression="&quot;Has accesado el portal del oeste, te encuentras en una zona monta&#241;osa, est&#225;s rodeado de picos tan grandes que estos tocan el cielo, pero notas que frente a ti hay un pilote de madera, asomas tu cabeza en el borde y ves que algunos metros m&#225;s abajo hay un tipo de plataforma, en la plataforma notas un esqueleto con lo que parece ser una llave en su mano y cerca de &#233;l ves una pala antigua, podr&#237;as bajar si amarraras alg&#250;n tipo de cuerda al pilote. &#191;Tienes alg&#250;n tipo de cuerda?&quot;" newline="True"/>
+                                                <input variable="userAnswer"/>
+                                                <if expression="userAnswer == &quot;si&quot; || userAnswer == &quot;Si&quot;">
+                                                    <then>
+                                                        <output expression="&quot;Usando las enredaderas que conseguiste en la jungla las amarras al pilote y logras descender a la plataforma y logras adquirir la llave del oeste, la pala que viste est&#225; en muy buen estado y podr&#237;as usarla luego.&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;Deber&#237;as buscar en otras zonas, tal vez en la jungla hay lianas&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+            <output expression="&quot; si llegaste a este punto significa que tienes todo lo que necesitas para acceder al tesoro, por lo que decides volver al centro para tratar de resolver el acertijo&quot;" newline="True"/>
+            <call expression="acertijoCentro"/>
+        </body>
+    </function>
+    <function name="acertijoCentro" type="Boolean" variable="true">
+        <parameters/>
+        <body>
+            <declare name="puertaAbierta" type="Boolean" array="False" size=""/>
+            <assign variable="puertaAbierta" expression="false"/>
+            <declare name="llave1, llave2, llave3, llave4" type="String" array="False" size=""/>
+            <declare name="numLlaves" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digita la cantidad de llaves que tienes&quot;" newline="True"/>
+            <input variable="numLlaves"/>
+            <if expression="numLlaves == 4">
+                <then>
+                    <while expression="numLlaves == 4">
+                        <output expression="&quot;Est&#225;s frente al acertijo de la puerta del centro y las &#250;nicas pistas que tienes son las notas que encontraste cuando hallaste las llaves y una nota que decia 1N2O3?4O-S&quot;" newline="True"/>
+                        <output expression="&quot;La llave 1 que encontraste parece tener forma circular y segun el archivo que encontraste, pod&#237;a calzar con la llave norte o la llave sur pero no est&#225;s seguro de d&#243;nde ponerla. &#191;En qu&#233; letra deseas colocarla?&quot;" newline="True"/>
+                        <input variable="llave1"/>
+                        <output expression="&quot;La llave 2 es de forma cuadrada y en la nota dec&#237;a que encajaba perfecto con la llave oeste y si es as&#237;, esta es una buena pista para no cambiar su posici&#243;n. &#191;En qu&#233; letra quieres ponerla?&quot;" newline="True"/>
+                        <input variable="llave2"/>
+                        <output expression="&quot;La llave 3 posee una forma triangular, en la nota se dec&#237;a que pod&#237;a calzar en la posici&#243;n este, oeste y sur pero deber&#237;as seguir el patr&#243;n correcto para poder abrir la puerta. &#191;En qu&#233; letra quieres colocarla?&quot;" newline="True"/>
+                        <input variable="llave3"/>
+                        <output expression="&quot;La llave 4 tiene forma de rombo y se dec&#237;a en las notas donde la encontraste que esta llave solo funcionaba en algo que apuntaba siempre hacia el sur pero esta tambien calza en el orificio norte. &#191;En cu&#225;l letra deseas ponerla?&quot;" newline="True"/>
+                        <input variable="llave4"/>
+                        <if expression="llave1 == &quot;norte&quot; AND llave2 == &quot;oeste&quot; AND llave3 == &quot;este&quot; AND llave4 == &quot;sur&quot;">
+                            <then>
+                                <assign variable="puertaAbierta" expression="true"/>
+                                <output expression="&quot;Al colocar las cuatro llaves en el lugar correcto, escuchas un mecanismo moverse y un sonido fuerte, la puerta comienza a abrirse como por arte de magia y se puede ver una luz muy fuerte que sale de su interior&quot;" newline="True"/>
+                                <assign variable="numLlaves" expression="numLlaves - 1"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Las llaves est&#225;n mal colocadas, prueba con una combinaci&#243;n diferente&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </while>
+                </then>
+                <else>
+                    <output expression="&quot;Tienes &quot; &amp;&amp; numLlaves &amp;&amp; &quot; llaves, deber&#237;as tener 4. &quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;&#161;FELICIDADES! lograste abrir la puerta&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="acertijoCueva" type="Boolean" variable="true">
+        <parameters/>
+        <body>
+            <declare name="respuesta" type="String" array="False" size=""/>
+            <declare name="puntuacion, opcion, claveSecreta" type="Integer" array="False" size=""/>
+            <declare name="pistaEncontrada" type="Boolean" array="False" size=""/>
+            <assign variable="pistaEncontrada" expression="false"/>
+            <assign variable="claveSecreta" expression="0"/>
+            <assign variable="puntuacion" expression="0"/>
+            <output expression="&quot;Est&#225;s en la entrada de la cueva pero parece que para entrar necesitas resolver el acertijo. Digita continuar&quot;" newline="True"/>
+            <output expression="&quot;Qu&#233; deseas hacer? (1) Examinar dibujo (2) Usar antorcha (3) Ir al este&quot;" newline="True"/>
+            <input variable="opcion"/>
+            <if expression="opcion = 1 OR opcion = 2 OR !(opcion =3)">
+                <then>
+                    <if expression="opcion = 1 or !(opcion =2)">
+                        <then>
+                            <output expression="&quot;El dibujo parece una serie de s&#237;mbolos antiguos que seg&#250;n tus conocimientos son los n&#250;meros 5 2. Podr&#237;a ser una pista. Digita continuar&quot;" newline="True"/>
+                            <assign variable="pistaEncontrada" expression="true"/>
+                            <assign variable="puntuacion" expression="puntuacion + 100"/>
+                            <output expression="&quot;Sumaste una vida&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <output expression="&quot;El pasadizo est&#225; muy oscuro. Quieres usar tu antorcha de nuevo&quot;" newline="True"/>
+                    <input variable="opcion"/>
+                    <while expression="opcion &gt;= 2 OR !(claveSecreta =52)">
+                        <output expression="&quot;Alumbras la zona con tu antorcha y ves un mecanismo donde puedes ingresar un c&#243;digo de 2 digitos&quot;" newline="True"/>
+                        <output expression="&quot;Debes ingresar la combinaci&#243;n correcta para abrir la puerta:&quot;" newline="True"/>
+                        <input variable="claveSecreta"/>
+                        <assign variable="claveSecreta" expression="claveSecreta"/>
+                        <assign variable="opcion" expression="0"/>
+                    </while>
+                    <output expression="&quot;FELICIDADES lograste abrir la puerta, ya puedes ingresar a las cuevas&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Volviendo al este&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
