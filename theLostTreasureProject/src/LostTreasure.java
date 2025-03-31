@@ -4,7 +4,7 @@ public class LostTreasure {
     public static void main(String[] args) {
         Utils.limpiarConsola();
 
-        String direction = "", userAnswer, ubicacionActual = "centro";
+        String direction = "", userAnswer, currentPosition = "centro";
         boolean playing = true;
 
         System.out.println("\r\n" +
@@ -38,7 +38,7 @@ public class LostTreasure {
 
         while (playing) {
             // Si el jugador está en el centro, se muestra el menú para elegir dirección
-            if (ubicacionActual.equals("centro")) {
+            if (currentPosition.equals("centro")) {
                 direction = Utils.leerString(
                         "Te encuentras en un lugar extremadamente antiguo, rodeado de ruinas cubiertas de musgo y colapsadas.\n"
                                 +
@@ -51,14 +51,13 @@ public class LostTreasure {
                 if (direction.equals("salir")) {
                     System.out.println("¡Gracias por jugar!");
                     playing = false;
-                    continue;
                 }
             }
 
             // Procesamos la exploración según la dirección seleccionada
             switch (direction) {
                 case "n":
-                    ubicacionActual = "norte";
+                    currentPosition = "norte";
                     userAnswer = Utils.leerString(
                             "\nHas accedido al portal del norte, el cual te lleva a la dorada playa Oro AU, lo único que ves es arena y pequeños destellos de pertenencias olvidadas entre esas pertenencias encuentras un contenedor con botellas de algún tipo de licor muchas de ellas están rotas pero logras rescatar 2, así como un poco de tela y algunas estacas con las que podrías hacer una antorcha, mientras exploras también notas un pequeño parche con algunas palmeras y tierra un poco más dura y una equis hecha con un par de piezas de madera, es este el tesoro de bytero? el problema es que la tierra es muy dura para usar tus manos. ¿tienes una pala?\n");
                     if (userAnswer.equalsIgnoreCase("si")) {
@@ -69,7 +68,7 @@ public class LostTreasure {
                     }
                     break;
                 case "s":
-                    ubicacionActual = "sur";
+                    currentPosition = "sur";
                     userAnswer = Utils.leerString(
                             "Has accedido al portal del sur y entras en una cueva oscura. ¿Tienes una antorcha? \n ");
                     if (userAnswer.equalsIgnoreCase("si")) {
@@ -80,7 +79,7 @@ public class LostTreasure {
                     }
                     break;
                 case "e":
-                    ubicacionActual = "este";
+                    currentPosition = "este";
                     userAnswer = Utils.leerString(
                             "Has accedido al portal del este y te encuentras en una jungla densa, tan llena de enredaderas y helechos que casi no te puedes mover, si tuvieras un machete podrías abrirte paso y hasta cortar algo de enredadera que te podria ser util luego. \n ¿tienes un machete?\n");
                     if (userAnswer.equalsIgnoreCase("si")) {
@@ -96,7 +95,7 @@ public class LostTreasure {
                     }
                     break;
                 case "o":
-                    ubicacionActual = "oeste";
+                    currentPosition = "oeste";
                     userAnswer = Utils.leerString(
                             "Has accedido al portal del oeste, te encuentras en una zona montañosa, estás rodeado de picos monumentalmente tan grandes que tocan el cielo, pero notas que frente a ti hay como un tipo de pilote de madera, asomas tu cabeza en el borde y ves que algunos metros más abajo hay un tipo de plataforma, en la plataforma notas un esqueleto con lo que parece una llave en su mano y cerca de el vez una pala antigua, podrías bajar si amarraras algún tipo de cuerda al pilote, \n ¿Tienes algún tipo de cuerda?\n");
                     if (userAnswer.equalsIgnoreCase("si")) {
@@ -110,21 +109,21 @@ public class LostTreasure {
                 default:
                     System.out.println("Dirección inválida. Por favor ingresa N, S, E u O.");
                     // Forzamos que vuelva al centro para intentar de nuevo
-                    ubicacionActual = "centro";
+                    currentPosition = "centro";
             }
 
             // Después de la exploración, si no estamos en el centro, se pregunta si desea
             // regresar
-            if (!ubicacionActual.equals("centro")) {
+            if (!currentPosition.equals("centro")) {
                 userAnswer = Utils.leerString("¿Deseas volver a las ruinas (centro)? (si/no): ");
                 if (userAnswer.equalsIgnoreCase("si")) {
-                    ubicacionActual = "centro";
+                    currentPosition = "centro";
                     // Se reinicia la variable direction para que se muestre el menú en la siguiente
                     // iteración
                     direction = "";
                 } else {
                     System.out.println("Como requisito, debes regresar a las ruinas para continuar la aventura.");
-                    ubicacionActual = "centro";
+                    currentPosition = "centro";
                     direction = "";
                 }
             }
